@@ -35,7 +35,7 @@
 
 [Full Changelog](https://github.com/adiwg/mdTranslator/compare/v2.16.1...v2.17.1)
 
-**Closed issues:**
+**New Translators:**
 
 - Enumerated Value lists Description written to the ISO 19110 output? [\#218](https://github.com/adiwg/mdTranslator/issues/218)
 - Support applicationProfile and protocolRequest in onlineResource [\#215](https://github.com/adiwg/mdTranslator/issues/215)

@@ -1,4 +1,5 @@
 /.project
+*.bak
 *.gem
 *.rbc
 .bundle
