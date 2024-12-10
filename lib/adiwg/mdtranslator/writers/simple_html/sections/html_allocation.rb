@@ -80,7 +80,7 @@ module ADIWG
                   # allocation - responsible parties [] {responsibleParty}
                   hAllocation[:responsibleParties].each do |hResponsibility|
                      @html.div do
-                        @html.div(hResponsibility[:roleName], 'class' => 'h5')
+                        @html.h5(hResponsibility[:roleName], 'class' => 'h5')
                         @html.div(:class => 'block') do
                            responsibilityClass.writeHtml(hResponsibility)
                         end
@@ -90,7 +90,7 @@ module ADIWG
                   # allocation - online resource [] {onlineResource}
                   hAllocation[:onlineResources].each do |hOnline|
                      @html.div do
-                        @html.div('Online Resource', {'class' => 'h5'})
+                        @html.h5('Online Resource', {'class' => 'h5'})
                         @html.div(:class => 'block') do
                            onlineClass.writeHtml(hOnline)
                         end

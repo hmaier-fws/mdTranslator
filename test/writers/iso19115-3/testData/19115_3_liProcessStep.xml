@@ -47,8 +47,8 @@
           <gml:identifier codeSpace="">time period identifier</gml:identifier>
           <gml:name>period name one</gml:name>
           <gml:name>period name two</gml:name>
-          <gml:beginPosition>2018-06-22T00:00:00</gml:beginPosition>
-          <gml:endPosition>2016-12-31T00:00:00</gml:endPosition>
+          <gml:beginPosition>2018-06-22</gml:beginPosition>
+          <gml:endPosition>2016-12-31</gml:endPosition>
           <gml:timeInterval unit="year">1.1</gml:timeInterval>
         </gml:TimePeriod>
       </mrl:stepDateTime>
@@ -155,7 +155,7 @@
               <cit:date>
                 <cit:CI_Date>
                   <cit:date>
-                    <gco:DateTime>2017-11-22T00:00:00</gco:DateTime>
+                    <gco:Date>2017-11-22</gco:Date>
                   </cit:date>
                   <cit:dateType>
                     <cit:CI_DateTypeCode codeList="http://mdtranslator.adiwg.org/api/codelists?format=xml#CI_DateTypeCode" codeListValue="publication" codeSpace="002"/>
@@ -231,8 +231,8 @@
           <gml:identifier codeSpace="">time period identifier</gml:identifier>
           <gml:name>period name one</gml:name>
           <gml:name>period name two</gml:name>
-          <gml:beginPosition>2018-06-22T00:00:00</gml:beginPosition>
-          <gml:endPosition>2016-12-31T00:00:00</gml:endPosition>
+          <gml:beginPosition>2018-06-22</gml:beginPosition>
+          <gml:endPosition>2016-12-31</gml:endPosition>
           <gml:timeInterval unit="year">1.1</gml:timeInterval>
         </gml:TimePeriod>
       </mrl:stepDateTime>
@@ -386,7 +386,7 @@
               <cit:date>
                 <cit:CI_Date>
                   <cit:date>
-                    <gco:DateTime>2017-11-22T00:00:00</gco:DateTime>
+                    <gco:Date>2017-11-22</gco:Date>
                   </cit:date>
                   <cit:dateType>
                     <cit:CI_DateTypeCode codeList="http://mdtranslator.adiwg.org/api/codelists?format=xml#CI_DateTypeCode" codeListValue="publication" codeSpace="002"/>
@@ -492,7 +492,7 @@
               <cit:date>
                 <cit:CI_Date>
                   <cit:date>
-                    <gco:DateTime>2017-11-22T00:00:00</gco:DateTime>
+                    <gco:Date>2017-11-22</gco:Date>
                   </cit:date>
                   <cit:dateType>
                     <cit:CI_DateTypeCode codeList="http://mdtranslator.adiwg.org/api/codelists?format=xml#CI_DateTypeCode" codeListValue="publication" codeSpace="002"/>
@@ -583,8 +583,8 @@
           <gml:identifier codeSpace="">time period identifier</gml:identifier>
           <gml:name>period name one</gml:name>
           <gml:name>period name two</gml:name>
-          <gml:beginPosition>2018-06-22T00:00:00</gml:beginPosition>
-          <gml:endPosition>2016-12-31T00:00:00</gml:endPosition>
+          <gml:beginPosition>2018-06-22</gml:beginPosition>
+          <gml:endPosition>2016-12-31</gml:endPosition>
           <gml:timeInterval unit="year">1.1</gml:timeInterval>
         </gml:TimePeriod>
       </mrl:stepDateTime>
@@ -738,7 +738,7 @@
               <cit:date>
                 <cit:CI_Date>
                   <cit:date>
-                    <gco:DateTime>2017-11-22T00:00:00</gco:DateTime>
+                    <gco:Date>2017-11-22</gco:Date>
                   </cit:date>
                   <cit:dateType>
                     <cit:CI_DateTypeCode codeList="http://mdtranslator.adiwg.org/api/codelists?format=xml#CI_DateTypeCode" codeListValue="publication" codeSpace="002"/>
@@ -844,7 +844,7 @@
               <cit:date>
                 <cit:CI_Date>
                   <cit:date>
-                    <gco:DateTime>2017-11-22T00:00:00</gco:DateTime>
+                    <gco:Date>2017-11-22</gco:Date>
                   </cit:date>
                   <cit:dateType>
                     <cit:CI_DateTypeCode codeList="http://mdtranslator.adiwg.org/api/codelists?format=xml#CI_DateTypeCode" codeListValue="publication" codeSpace="002"/>

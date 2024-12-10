@@ -26,6 +26,7 @@ require_relative 'class_maintenance'
 require_relative 'class_spatialRepresentation'
 require_relative 'class_referenceSystem'
 require_relative 'class_featureCatalog'
+require_relative 'class_extension'
 
 module ADIWG
    module Mdtranslator
@@ -62,6 +63,7 @@ module ADIWG
                   representationClass = SpatialRepresentation.new(@xml, @hResponseObj)
                   referenceSystemClass = MD_ReferenceSystem.new(@xml, @hResponseObj)
                   mdCatalogClass = MD_FeatureCatalogue.new(@xml, @hResponseObj)
+                  extensionClass = MD_MetadataExtensionInformation.new(@xml, @hResponseObj)
 
                   # create shortcuts to sections of internal object
                   hMetadata = intObj[:metadata]
@@ -85,7 +87,7 @@ module ADIWG
                   # schema locations
                   # set to 'remoteSchema' before publishing
                   localSchema = 'C:\Users\StanSmith\Projects\ISO\19115\-3\mdt\1.0\mdt.xsd'
-                  remoteSchema = 'http://standards.iso.org/iso/19115/-3/mdt/2.0/mdt.xsd'
+                  remoteSchema = 'https://schemas.isotc211.org/19115/-3/mdt/2.0/mdt.xsd'
 
                   # MD_Metadata
                   @xml.tag!('mdb:MD_Metadata',
@@ -289,6 +291,31 @@ module ADIWG
                      end
                      if aReferenceSystems.empty? && @hResponseObj[:writerShowTags]
                         @xml.tag!('mdb:referenceSystemInfo')
+                     end
+
+                     taxonomyArray = hResInfo[:taxonomy]
+                     unless taxonomyArray.empty?
+                        # metadata information - metadata extension info
+                        # add biological profile to all metadata records
+                        intBio = intMetadataClass.newMetadataExtension
+                        intBio[:name] = 'Taxonomy System'
+                        intBio[:shortName] = 'TaxonSys'
+                        intBio[:definition] = 'Documentation of taxonomic sources, procedures, and treatments'
+                        intBio[:obligation] = 'optional'
+                        intBio[:dataType] = 'class'
+                        intBio[:maxOccurrence] = '1'
+                        intBio[:parentEntities] << 'MD_Identification'
+                        intBio[:rule] = 'New Metadata section as a class to MD_Identification'
+                        intBio[:rationales] << 'The set of data elements contained within this class element ' +
+                           'represents an attempt to provide better documentation of ' +
+                           'taxonomic sources, procedures, and treatments.'
+                        intBio[:sourceOrganization] = 'National Biological Information Infrastructure'
+                        intBio[:sourceURI] = 'https://www2.usgs.gov/core_science_systems/Access/p1111-1.html'
+                        intBio[:sourceRole] = 'author'
+
+                        @xml.tag!('gmd:metadataExtensionInfo') do
+                           extensionClass.writeXML(intBio)
+                        end
                      end
 
                      # ###################### Begin Data Identification #####################

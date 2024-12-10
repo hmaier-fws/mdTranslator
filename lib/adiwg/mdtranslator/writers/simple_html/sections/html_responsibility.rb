@@ -27,7 +27,7 @@ module ADIWG
                   hResponsibility[:parties].each do |hParty|
                      hContact = Html_Document.getContact(hParty[:contactId])
                      @html.div do
-                        @html.div(hContact[:name], 'class' => 'h5')
+                        @html.h5(hContact[:name], 'class' => 'h5')
                         @html.div(:class => 'block') do
 
                            # party - contact ID
@@ -65,7 +65,7 @@ module ADIWG
                   # # responsibility - role extent [] {extent}
                   # hResponsibility[:roleExtents].each do |hExtent|
                   #    @html.div do
-                  #       @html.div('Extent', {'class' => 'h5'})
+                  #       @html.h5('Extent', {'class' => 'h5'})
                   #       @html.div(:class => 'block') do
                   #          extentClass.writeHtml(hExtent)
                   #       end
